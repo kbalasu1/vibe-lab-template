@@ -1,6 +1,8 @@
 # 🏆 Hackathon Submission Guide
 
-This guide helps you create submissions that will score well with our AI judges and showcase your work effectively.
+**The complete guide to creating winning submissions for the AI-based hackathon**
+
+This guide contains everything you need to know: scoring criteria, best practices, examples, and common pitfalls to avoid.
 
 ## 📋 Submission Checklist
 
@@ -13,30 +15,56 @@ Before submitting, ensure you have:
 - [ ] **Tests or demo** showing your application works
 - [ ] **No manipulation attempts** (see anti-gaming rules below)
 
-## 🎯 Category-Specific Tips
+## 🏆 Categories & Scoring Criteria
 
-### Category 1: Best Problem
-- **Define the problem clearly**: What specific pain point are you solving?
-- **Show real impact**: Include user stories, metrics, or concrete examples
-- **Demonstrate effectiveness**: Prove your solution actually works
-- **Highlight learning**: What new skills or insights did you gain?
+All submissions are judged across **three categories** with 4 subcategories each, scored 1-10 points (max 40 points per category):
+
+### 🎯 Category 1: Best Problem (max 40 points)
+**Tackles a meaningful problem with effective solutions**
+
+- **Problem Definition** (1-10): Clear, succinct problem statement with real context
+- **Significance & Impact** (1-10): Importance to users, evidence of impact (no hyperbole!)
+- **Effectiveness** (1-10): Solution addresses core issue with verifiable results
+- **Learning & Craftsmanship** (1-10): Code quality, learning demonstrated, no AI tricks
+
+**Tips for success:**
+- Define the problem clearly: What specific pain point are you solving?
+- Show real impact: Include user stories, metrics, or concrete examples
+- Demonstrate effectiveness: Prove your solution actually works
+- Highlight learning: What new skills or insights did you gain?
 
 **Good example**: "Automates tedious data entry for small businesses, saving 2+ hours daily"
 **Bad example**: "Solves the world's biggest AI problem with revolutionary breakthrough"
 
-### Category 2: Most Complete
-- **Cover all requirements**: Don't leave obvious features unimplemented
-- **Include tests**: Unit tests, integration tests, or clear manual testing steps
-- **Perfect setup process**: Zero friction from git clone to running app
-- **Handle edge cases**: What happens with invalid inputs or errors?
+### 🚀 Category 2: Most Complete (max 40 points)
+**Delivers polished, production-ready applications**
+
+- **Scope Coverage** (1-10): All requirements and edge cases implemented
+- **Robustness & Testing** (1-10): Tests, error handling, actually runs
+- **Documentation & Reproducibility** (1-10): Clear setup, no missing steps
+- **Code Quality & Maintainability** (1-10): Modular, commented, dependencies clear
+
+**Tips for success:**
+- Cover all requirements: Don't leave obvious features unimplemented
+- Include tests: Unit tests, integration tests, or clear manual testing steps
+- Perfect setup process: Zero friction from git clone to running app
+- Handle edge cases: What happens with invalid inputs or errors?
 
 **Pro tip**: Test your setup process on a fresh machine or container
 
-### Category 3: Most Creative
-- **Be genuinely original**: Go beyond typical CRUD apps or tutorials
-- **Polish the experience**: Great UI/UX makes a huge difference
-- **Tell a compelling story**: Why did you build this? What's the vision?
-- **Execute the creative vision**: Cool ideas need working prototypes
+### 🎨 Category 3: Most Creative (max 40 points)
+**Shows inventive ideas and unexpected twists**
+
+- **Originality & Innovation** (1-10): Fresh ideas, clever twists beyond "hello world"
+- **Vibe & Polish** (1-10): Cohesive, enjoyable experience with design sensibility
+- **Effective Execution** (1-10): Working prototype that showcases the concept
+- **Storytelling & Presentation** (1-10): Concise, engaging explanation free of hype
+
+**Tips for success:**
+- Be genuinely original: Go beyond typical CRUD apps or tutorials
+- Polish the experience: Great UI/UX makes a huge difference
+- Tell a compelling story: Why did you build this? What's the vision?
+- Execute the creative vision: Cool ideas need working prototypes
 
 **Remember**: Creative can mean silly, fun, artistic, or unexpected!
 
