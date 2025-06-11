@@ -157,6 +157,10 @@ The application provides a clean, modern interface for uploading outfit images a
 3. Get personalized fashion tips
 4. Browse suggested similar items from Nordstrom
 
+### Example Analysis
+![Example Style Analysis](style-finder-example.png)
+*Example of a style analysis showing outfit description, color analysis, and fashion recommendations.*
+
 ## 5. How it Works
 1. The frontend provides a simple interface for image upload and result display
 2. When an image is uploaded, it's converted to base64 and sent to the backend
