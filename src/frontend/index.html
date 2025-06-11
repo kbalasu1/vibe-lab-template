@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style-Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Style-Finder</h1>
+        <p>Upload a photo of an outfit to get fashion tips and product links.</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="upload-section">
+                <h2>1. Upload Your Image</h2>
+                <input type="file" id="image-upload" accept="image/*">
+                <div class="image-preview" id="image-preview">
+                    <img src="" alt="Image Preview" class="image-preview__image">
+                    <span class="image-preview__default-text">Image Preview</span>
+                </div>
+                <button id="analyze-button" disabled>Analyze Outfit</button>
+            </div>
+
+            <div class="results-section" id="results-section">
+                <h2>2. Analysis Results</h2>
+                <div id="loader" class="loader" style="display: none;"></div>
+                <div id="results-content">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Built for the Vibe Lab Hackathon</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 
