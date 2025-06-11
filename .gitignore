@@ -1,0 +1,25 @@
+# Environment variables
+.env
+
+# Logs
+*.log
+backend.log
+frontend.log
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Instructions
+README-instructions.md
