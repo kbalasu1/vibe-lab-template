@@ -1,0 +1,10 @@
+# Sample submissions file for hackathon judging
+# Add one GitHub repository URL per line
+# Lines starting with # are comments and will be ignored
+
+# Example submissions (replace with actual repo URLs):
+# https://github.com/user1/awesome-project
+# https://github.com/user2/cool-solution  
+# https://github.com/user3/creative-app
+
+# Add your actual submission URLs below: 
