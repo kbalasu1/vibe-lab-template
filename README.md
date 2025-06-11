@@ -31,6 +31,12 @@ Each category has 4 subcategories scored 1-10, for a **total possible score of 4
 ### Output Format
 Results will be recorded in `scores.md` with three markdown tables (one per category), sorted by highest total scores first.
 
+### For Participants
+📖 **Read the [Submission Guide](SUBMISSION_GUIDE.md)** for tips on creating winning submissions!
+
+### For Judges  
+🤖 **Use the [Judging System](judging/)** for automated scoring and consistency.
+
 ---
 
 # Project Title  

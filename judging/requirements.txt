@@ -1,0 +1,13 @@
+# Requirements for the hackathon judging system
+# Install with: pip install -r requirements.txt
+
+# No external dependencies required - uses only Python standard library
+# The script relies on system tools:
+# - git (for cloning repositories)
+# - pip/npm/make/cargo (for setup commands, depending on project type)
+
+# Optional: for enhanced scoring features (not implemented in basic version)
+# requests>=2.31.0          # For API calls
+# beautifulsoup4>=4.12.0     # For HTML parsing
+# GitPython>=3.1.0           # For advanced git operations
+# nltk>=3.8.0                # For natural language processing 
