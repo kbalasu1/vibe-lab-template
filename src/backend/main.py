@@ -15,13 +15,7 @@ api_key = os.getenv("AZURE_OPENAI_API_KEY")
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT", "GPT4-Vision")
 api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
-max_tokens = 1000  # Define max_tokens constant
-
-# Print debug information about the configuration
-print(f"Debug - API Key loaded: {api_key[:5]}...{api_key[-5:]}")
-print(f"Debug - Endpoint: {endpoint}")
-print(f"Debug - Deployment: {deployment}")
-print(f"Debug - API Version: {api_version}")
+max_tokens = 1000
 
 if not all([api_key, endpoint, deployment]):
     print("Error: Azure OpenAI configuration not found in environment variables!")
@@ -38,13 +32,6 @@ client = AzureOpenAI(
     api_version=api_version,
     azure_endpoint=endpoint,
 )
-
-# Print additional debug information about the client
-print(f"Debug - Client initialized with:")
-print(f"  - API Key (first/last 5): {api_key[:5]}...{api_key[-5:]}")
-print(f"  - API Version: {api_version}")
-print(f"  - Azure Endpoint: {endpoint}")
-print(f"  - Deployment: {deployment}")
 
 app = FastAPI(
     title="Style-Finder API",
@@ -69,12 +56,6 @@ def analyze_image_with_gpt4v(image_content: bytes) -> dict:
     try:
         # Convert image to base64
         base64_image = base64.b64encode(image_content).decode('utf-8')
-        
-        print(f"Debug - Using deployment: {deployment}")
-        print(f"Debug - Using endpoint: {endpoint}")
-        print(f"Debug - API version: {api_version}")
-        print(f"Debug - Client configuration:")
-        print(f"  - base_url: {client.base_url}")
         
         # Prepare the messages with a more structured prompt
         messages = [
@@ -101,12 +82,6 @@ def analyze_image_with_gpt4v(image_content: bytes) -> dict:
             }
         ]
         
-        print("Debug - Attempting to create chat completion...")
-        print("Debug - Request configuration:")
-        print(f"  - model: {deployment}")
-        print(f"  - max_tokens: {max_tokens}")
-        print(f"  - messages: [user message with text and image]")
-        
         # Make the API call with the required parameters
         response = client.chat.completions.create(
             model=deployment,  # Use the deployment name as the model
@@ -117,7 +92,6 @@ def analyze_image_with_gpt4v(image_content: bytes) -> dict:
         
         # Extract the raw response
         result = response.choices[0].message.content
-        print(f"Debug - Raw GPT response: {result}")
         
         # Initialize the response structure
         analysis = {
@@ -206,13 +180,9 @@ def analyze_image_with_gpt4v(image_content: bytes) -> dict:
             'suggestedItems': suggested_items
         }
         
-        print(f"Debug - Parsed response: {response_data}")
         return response_data
         
     except Exception as e:
-        print(f"Debug - API call error details: {str(e)}")
-        print(f"Debug - API error type: {type(e)}")
-        print(f"Debug - Full API error: {e.__dict__}")
         raise HTTPException(
             status_code=500,
             detail=f"API call failed: {str(e)}"

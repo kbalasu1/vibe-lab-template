@@ -7,12 +7,31 @@
     "start:frontend": "http-server ./src/frontend -p 8080",
     "start:backend": "python -m uvicorn src.backend.main:app --host 0.0.0.0 --port 8000 --reload",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "install:backend": "pip install -r requirements.txt"
+    "install:backend": "pip install -r requirements.txt",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:frontend": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./tests/test_frontend.js --env=jsdom --testMatch=\"**/tests/test_frontend.js\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.0.0",
+    "jsdom": "^24.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "<rootDir>/tests/mocks/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/mocks/fileMock.js"
+    },
+    "setupFiles": ["<rootDir>/tests/setup.js"],
+    "transform": {}
   }
-} 
+}
