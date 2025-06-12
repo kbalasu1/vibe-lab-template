@@ -107,7 +107,38 @@ This project contains a Python backend and a JavaScript frontend. The following 
 5.  **Access the application:**
     Open `http://localhost:8080/index.html` in your web browser.
 
-## 3. Architecture
+## 4. Running Tests
+
+The project includes both frontend (Jest) and backend (pytest) unit tests. Here's how to run them:
+
+### Frontend Tests
+Run the frontend tests using Jest:
+```bash
+npm test
+```
+or specifically run frontend tests:
+```bash
+npm run test:frontend
+```
+
+### Backend Tests
+Run the backend tests using pytest:
+```bash
+python -m pytest tests/test_backend.py -v
+```
+
+### Running All Tests
+You can run both frontend and backend tests in sequence:
+```bash
+npm test && python -m pytest tests/test_backend.py -v
+```
+
+The test suite includes:
+- Frontend tests for UI components and functionality
+- Backend tests for API endpoints and GPT-4V integration
+- Error handling and edge cases
+
+## 5. Architecture
 The application consists of a frontend single-page application, a Python backend API, and integrates with Azure OpenAI's GPT-4V for vision analysis.
 
 ```mermaid
@@ -145,7 +176,7 @@ graph TD
 └── .env               ← Azure OpenAI configuration
 ```
 
-## 4. Demo
+## 6. Demo
 The application provides a clean, modern interface for uploading outfit images and receiving detailed style analysis:
 
 1. Upload an image using the file picker or drag-and-drop
@@ -167,7 +198,7 @@ The application provides a clean, modern interface for uploading outfit images a
 ![Style Analysis Results](Output_of_Style_Finder.png)
 *Detailed style analysis showing outfit description, color analysis, and fashion recommendations*
 
-## 5. How it Works
+## 7. How it Works
 1. The frontend provides a simple interface for image upload and result display
 2. When an image is uploaded, it's converted to base64 and sent to the backend
 3. The backend:
@@ -179,7 +210,7 @@ The application provides a clean, modern interface for uploading outfit images a
 4. The frontend displays the results in an organized, user-friendly format
 5. Links to similar items are generated dynamically based on the analysis
 
-## 6. Future Improvements
+## 8. Future Improvements
 - Add support for multiple image uploads
 - Implement user accounts to save favorite analyses
 - Add more detailed product recommendations
